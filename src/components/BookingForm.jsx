@@ -4,7 +4,7 @@ import { getBookedTimesByDate } from '../services/availabilityService';
 
 const today = new Date().toISOString().slice(0, 10);
 
-export function BookingForm({ barbers, availableTimes, onCreateAppointment }) {
+export function BookingForm({ availableTimes, onCreateAppointment }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [selectedDate, setSelectedDate] = useState('');
   const [selectedTime, setSelectedTime] = useState('');
@@ -52,6 +52,7 @@ export function BookingForm({ barbers, availableTimes, onCreateAppointment }) {
     const formData = new FormData(event.currentTarget);
     const appointmentData = {
       ...Object.fromEntries(formData.entries()),
+      barber: 'Emanuel',
       service: 'Turno general de 45 minutos',
     };
 
@@ -109,16 +110,6 @@ export function BookingForm({ barbers, availableTimes, onCreateAppointment }) {
         <label>
           Telefono
           <input name="clientPhone" type="tel" placeholder="11 2345 6789" required />
-        </label>
-        <label>
-          Barbero
-          <select name="barber" required defaultValue={barbers[0]}>
-            {barbers.map((barber) => (
-              <option value={barber} key={barber}>
-                {barber}
-              </option>
-            ))}
-          </select>
         </label>
         <label>
           Fecha

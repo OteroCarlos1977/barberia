@@ -13,7 +13,6 @@ const today = new Date().toISOString().slice(0, 10);
 export function AdminAccess({
   isOpen,
   onClose,
-  barbers,
   availableTimes,
 }) {
   const [isAuthenticated, setIsAuthenticated] = useState(() => Boolean(getAdminToken()));
@@ -80,7 +79,7 @@ export function AdminAccess({
     const appointmentData = {
       clientName: String(formData.get('clientName') || '').trim(),
       clientPhone: String(formData.get('clientPhone') || '').trim(),
-      barber: String(formData.get('barber') || barbers[0]),
+      barber: 'Emanuel',
       date: selectedDate,
       time: String(formData.get('time') || ''),
       notes: String(formData.get('notes') || '').trim(),
@@ -225,16 +224,6 @@ export function AdminAccess({
                   {availableTimes.map((time) => (
                     <option value={time} key={time}>
                       {time}
-                    </option>
-                  ))}
-                </select>
-              </label>
-              <label>
-                Barbero
-                <select name="barber" required defaultValue={barbers[0]}>
-                  {barbers.map((barber) => (
-                    <option value={barber} key={barber}>
-                      {barber}
                     </option>
                   ))}
                 </select>

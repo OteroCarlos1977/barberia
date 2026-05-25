@@ -1,6 +1,10 @@
-import { Shirt } from 'lucide-react';
+import { WhatsAppIcon } from './BrandIcons.jsx';
 
-export function SuitRentalAside() {
+export function SuitRentalAside({ business }) {
+  const whatsappUrl = `https://wa.me/${business.phone}?text=${encodeURIComponent(
+    'Hola, quiero consultar disponibilidad para alquiler de trajes en EMAPE.BARBERSHOP.',
+  )}`;
+
   return (
     <aside className="suit-aside" id="trajes">
       <div className="suit-media">
@@ -22,8 +26,8 @@ export function SuitRentalAside() {
           La idea es simple: que puedas salir del lugar no solo con un buen corte, sino también
           con una imagen completa, prolija y preparada para la ocasión.
         </p>
-        <a className="button button-gold" href="#turnos">
-          <Shirt size={18} />
+        <a className="button button-gold" href={whatsappUrl} target="_blank" rel="noreferrer">
+          <WhatsAppIcon />
           Consultar disponibilidad
         </a>
       </div>

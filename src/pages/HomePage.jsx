@@ -16,7 +16,7 @@ const barbershopData = getBarbershopData();
 export function HomePage() {
   const [isAdminOpen, setIsAdminOpen] = useState(false);
   const { addAppointment } = useAppointments();
-  const { business, services, barbers, availableTimes } = barbershopData;
+  const { business, services, availableTimes } = barbershopData;
 
   return (
     <>
@@ -27,16 +27,14 @@ export function HomePage() {
         <VisualGallery />
         {/*<FeaturedPhrase />} */}
         <ServiceList services={services} />
-        <SuitRentalAside />
+        <SuitRentalAside business={business} />
         <BookingForm
-          barbers={barbers}
           availableTimes={availableTimes}
           onCreateAppointment={addAppointment}
         />
         <AdminAccess
           isOpen={isAdminOpen}
           onClose={() => setIsAdminOpen(false)}
-          barbers={barbers}
           availableTimes={availableTimes}
         />
       </main>
