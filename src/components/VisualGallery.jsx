@@ -21,7 +21,7 @@ export function VisualGallery() {
     <section className="gallery-section" aria-labelledby="gallery-title">
       <div className="section-heading">
         <p className="eyebrow">El lugar</p>
-        <h2 id="gallery-title">Un espacio pensado para tu mejor experiencia</h2>
+        <h2 id="gallery-title">Ambiente privado, identidad y oficio en cada detalle</h2>
       </div>
       <div className="gallery-grid">
         {galleryImages.map((image) => (
