@@ -97,8 +97,8 @@ export function BookingForm({ availableTimes, onCreateAppointment }) {
         <p className="eyebrow">Turnero</p>
         <h2>Reservá 45 minutos para vos</h2>
         <p className="section-intro">
-          No hace falta elegir el servicio antes. Reservás el espacio y, al llegar, se define qué
-          conviene trabajar según tu estilo, tu rostro y lo que necesitás ese día.
+          Reservá tu espacio, al llegar, definimos que y como 
+          conviene trabajar, según tu estilo, tu rostro y lo que necesitás ese día.
         </p>
       </div>
 
