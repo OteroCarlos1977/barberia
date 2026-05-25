@@ -188,15 +188,15 @@ textarea {
 }
 
 .hero-local-label {
-  margin: 0 0 8px;
-  padding: 7px 13px;
+  margin: 0 0 10px;
+  padding: 9px 16px;
   border: 1px solid rgba(255, 201, 40, 0.28);
   border-radius: 999px;
   background:
     linear-gradient(135deg, rgba(7, 11, 23, 0.78), rgba(16, 26, 61, 0.72)),
     radial-gradient(circle at 20% 15%, rgba(255, 201, 40, 0.22), transparent 55%);
   color: #f5ead0;
-  font-size: clamp(0.92rem, 1.7vh, 1.04rem);
+  font-size: clamp(1.05rem, 2vh, 1.22rem);
   font-weight: 900;
   letter-spacing: 0.02em;
   text-transform: uppercase;
