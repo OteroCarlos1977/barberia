@@ -5,7 +5,8 @@ export function Hero({ business }) {
   const whatsappUrl = `https://wa.me/${business.phone}?text=${encodeURIComponent(
     'Hola, quiero consultar por un turno en Emape Barbershop.',
   )}`;
-  const instagramUrl = `https://www.instagram.com/${business.instagram.replace('@', '')}`;
+  const instagramUrl =
+    business.instagramUrl || `https://www.instagram.com/${business.instagram.replace('@', '')}`;
   const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
     business.address,
   )}`;
