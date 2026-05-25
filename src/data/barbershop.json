@@ -1,0 +1,66 @@
+{
+  "business": {
+    "name": "EMAPE.BARBERSHOP",
+    "tagline": "Un corte tranquilo, prolijo y pensado para vos.",
+    "address": "Hipolito Hirigoyrn 1234, Buenos Aires",
+    "phone": "5492245479176",
+    "instagram": "@emape.barbershop",
+    "openingHours": "Lunes a Sabado, 10:00 a 12:00 y 17:00 a 21:00"
+  },
+  "services": [
+    {
+      "id": "classic-cut",
+      "name": "Corte de cabello",
+      "duration": 45,
+      "price": 0,
+      "description": "Un corte pensado para tu rostro, tu estilo y tu forma de llevarlo. El trabajo se define en el sillón, con tiempo para escuchar, observar y lograr un resultado prolijo."
+    },
+    {
+      "id": "shave",
+      "name": "Rasurado",
+      "duration": 45,
+      "price": 0,
+      "description": "Rasurado cuidado, terminaciones limpias y atención al detalle para que la piel y la imagen queden prolijas, cómodas y bien presentadas."
+    },
+    {
+      "id": "eyebrows",
+      "name": "Perfilado y corte de cejas",
+      "duration": 45,
+      "price": 0,
+      "description": "Un ajuste sutil que ordena la mirada sin cambiar tu identidad. Se trabaja con criterio para acompañar el rostro y mejorar la presencia."
+    },
+    {
+      "id": "details",
+      "name": "Oreja, nariz y terminaciones",
+      "duration": 45,
+      "price": 0,
+      "description": "Pequeños detalles que hacen que el resultado final se vea más limpio: nuca, contornos, oreja, nariz y retoques que completan el servicio."
+    },
+    {
+      "id": "personalized",
+      "name": "Terminaciones personalizadas",
+      "duration": 45,
+      "price": 0,
+      "description": "Cada turno se adapta a lo que necesitás ese día. El objetivo es que salgas con una imagen equilibrada, natural y trabajada con seriedad."
+    },
+    {
+      "id": "suit-rental",
+      "name": "Consulta por alquiler de trajes",
+      "duration": 45,
+      "price": 0,
+      "description": "También podés consultar por trajes de ocasión para completar una imagen prolija en eventos, reuniones o fechas especiales."
+    }
+  ],
+  "appointmentDuration": 45,
+  "barbers": ["Emanuel", "Barbero disponible"],
+  "availableTimes": [
+    "10:00",
+    "10:45",
+    "11:30",
+    "17:00",
+    "17:45",
+    "18:30",
+    "19:15",
+    "20:00"
+  ]
+}
