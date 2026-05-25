@@ -14,7 +14,7 @@ export function Header({ onOpenAdmin }) {
     <header className="site-header">
       <a className="brand" href="#inicio" aria-label="Ir al inicio" onClick={closeMenu}>
         <img className="brand-mark" src="/images/logo.png" alt="" />
-        <span className="brand-text">EMAPE.BARBERSHOP</span>
+        <span className="brand-text">Emanuel Perez</span>
       </a>
       <button
         className="menu-toggle"
