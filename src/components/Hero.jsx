@@ -6,12 +6,16 @@ export function Hero({ business }) {
     'Hola, quiero consultar por un turno en Emape Barbershop.',
   )}`;
   const instagramUrl = `https://www.instagram.com/${business.instagram.replace('@', '')}`;
+  const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+    business.address,
+  )}`;
 
   return (
     <section className="hero" id="inicio">
       <div className="hero-copy">
         <h1 className="sr-only">EMAPE.BARBERSHOP, barberia con turnos en Dolores</h1>
-        
+
+        <p className="hero-local-label">Tu barbería en Dolores</p>
         <div className="hero-logo-wrap">
           <img className="hero-logo" src="/images/logo-transparent.png" alt="EMAPE.BARBERSHOP" />
         </div>
@@ -19,10 +23,10 @@ export function Hero({ business }) {
         <p className="hero-support">
           Cada turno es un momento único, tu momento.
         </p>
-        <p className="hero-address">
+        <a className="hero-address" href={mapsUrl} target="_blank" rel="noreferrer">
           <MapPin size={18} />
           {business.address}
-        </p>
+        </a>
         <div className="hero-actions">
           <a className="button button-primary" href="#turnos">
             <CalendarCheck size={20} />
