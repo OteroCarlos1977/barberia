@@ -38,6 +38,10 @@ export function HomePage() {
           availableTimes={availableTimes}
         />
       </main>
+      <footer className="developer-footer" aria-label="Marca de desarrollo">
+        <span className="developer-footer-mark">CO</span>
+        <span>Desarrollado por Carlos Otero</span>
+      </footer>
     </>
   );
 }
