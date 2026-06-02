@@ -9,8 +9,8 @@ export function BrandStory() {
       <div className="story-layout">
         <div className="story-copy">
           <p>
-            En EMAPE.BARBERSHOP cada turno es personal. Acá cada persona tiene
-            su momento, su espacio y la dedicación que merece.
+            En EMAPE.BARBERSHOP, Emanuel Pérez trabaja cada turno de forma personal.
+            Acá cada persona tiene su momento, su espacio y la dedicación que merece.
           </p>
           <p>
             La barbería está pensada como un entorno de exclusividad. No hay sala de espera 

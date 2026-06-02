@@ -14,9 +14,12 @@ export function Hero({ business }) {
   return (
     <section className="hero" id="inicio">
       <div className="hero-copy">
-        <h1 className="sr-only">EMAPE.BARBERSHOP, barberia con turnos en Dolores</h1>
+        <h1 className="sr-only">
+          EMAPE.BARBERSHOP, barberia de Emanuel Pérez con turnos en Dolores
+        </h1>
 
         <p className="hero-local-label">Tu barbería en Dolores</p>
+        <p className="hero-barber-label">Emanuel Pérez, barbero en Dolores</p>
         <div className="hero-logo-wrap">
           <img className="hero-logo" src="/images/logo-transparent.png" alt="EMAPE.BARBERSHOP" />
         </div>

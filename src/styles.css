@@ -206,6 +206,16 @@ textarea {
   text-shadow: 0 2px 8px rgba(3, 9, 34, 0.92);
 }
 
+.hero-barber-label {
+  margin: 0 0 8px;
+  color: #f5ead0;
+  font-size: clamp(1rem, 1.8vh, 1.12rem);
+  font-weight: 900;
+  text-shadow:
+    0 2px 8px rgba(3, 9, 34, 0.92),
+    0 0 14px rgba(255, 201, 40, 0.18);
+}
+
 .eyebrow {
   margin: 0 0 10px;
   color: var(--gold-500);
