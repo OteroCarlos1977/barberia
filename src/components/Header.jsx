@@ -1,14 +1,9 @@
 import { useState } from 'react';
-import { CalendarDays, ClipboardList, Menu, Shirt, X } from 'lucide-react';
+import { MessageCircle, Menu, Shirt, Sparkles, X } from 'lucide-react';
 
-export function Header({ onOpenAdmin }) {
+export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const closeMenu = () => setIsMenuOpen(false);
-
-  const handleOpenAdmin = () => {
-    closeMenu();
-    onOpenAdmin();
-  };
 
   return (
     <header className="site-header">
@@ -31,18 +26,22 @@ export function Header({ onOpenAdmin }) {
         id="main-navigation"
         aria-label="Navegacion principal"
       >
-        <a href="#turnos" onClick={closeMenu}>
-          <CalendarDays size={18} />
-          Turnos
+        <a href="#servicios" onClick={closeMenu}>
+          <Sparkles size={18} />
+          Servicios
+        </a>
+        <a href="#limpieza-facial" onClick={closeMenu}>
+          <Sparkles size={18} />
+          Limpieza facial
         </a>
         <a href="#trajes" onClick={closeMenu}>
           <Shirt size={18} />
           Trajes
         </a>
-        <button className="nav-button" type="button" onClick={handleOpenAdmin}>
-          <ClipboardList size={18} />
-          Agenda
-        </button>
+        <a className="nav-button" href="#contacto" onClick={closeMenu}>
+          <MessageCircle size={18} />
+          Coordinar
+        </a>
       </nav>
     </header>
   );

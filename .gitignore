@@ -1,6 +1,8 @@
 node_modules/
 dist/
 .netlify/
+.playwright-cli/
+output/
 .env
 .env.local
 .env.*.local

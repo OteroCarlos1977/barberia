@@ -9,13 +9,13 @@ export function BrandStory() {
       <div className="story-layout">
         <div className="story-copy">
           <p>
-            En EMAPE.BARBERSHOP, Emanuel Pérez trabaja cada turno de forma personal.
+            En EMAPE.BARBERSHOP, Emanuel Pérez trabaja cada atención de forma personal.
             Acá cada persona tiene su momento, su espacio y la dedicación que merece.
           </p>
           <p>
             La barbería está pensada como un entorno de exclusividad. No hay sala de espera 
-            ni movimiento constante alrededor. Trabajo con turnos para que cada cliente pueda
-            sentirse cómodo, tranquilo y bien atendido desde que llega hasta que se va.
+            ni movimiento constante alrededor. Cada atención se coordina directamente por WhatsApp
+            para encontrar un momento posible y atender a cada cliente con tranquilidad.
           </p>
           <p>
             Cortar el pelo no es solamente pasar una máquina o acomodar una forma. Es mirar el

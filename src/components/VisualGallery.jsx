@@ -11,8 +11,8 @@ const galleryImages = [
   },
   {
     src: '/images/06-miniatura-profesional-emape.jpg',
-    alt: 'Sillon de barberia listo para un turno personalizado',
-    label: 'Turnos personales',
+    alt: 'Sillon de barberia listo para una atención personalizada',
+    label: 'Atención personal',
   },
 ];
 

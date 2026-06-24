@@ -1,4 +1,4 @@
-import { BadgeCheck, Brush, ScanFace, Scissors, Shirt, Sparkles } from 'lucide-react';
+import { BadgeCheck, Brush, Droplets, ScanFace, Scissors, Shirt, Sparkles } from 'lucide-react';
 
 const serviceIcons = {
   'classic-cut': { Icon: Scissors, className: 'service-icon-gold' },
@@ -6,6 +6,7 @@ const serviceIcons = {
   eyebrows: { Icon: ScanFace, className: 'service-icon-green' },
   details: { Icon: Sparkles, className: 'service-icon-cyan' },
   personalized: { Icon: BadgeCheck, className: 'service-icon-gold' },
+  'facial-cleaning': { Icon: Droplets, className: 'service-icon-cyan' },
   'suit-rental': { Icon: Shirt, className: 'service-icon-blue' },
 };
 

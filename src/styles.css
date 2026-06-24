@@ -74,8 +74,7 @@ textarea {
 .brand,
 .nav-links,
 .hero-actions,
-.contact-items,
-.agenda-actions {
+.contact-items {
   display: flex;
   align-items: center;
 }
@@ -465,12 +464,10 @@ h2 {
 
 .section,
 .story-section,
-.booking-section,
-.agenda-section,
-.admin-login-section,
-.admin-private-section,
 .featured-phrase,
 .suit-aside,
+.facial-section,
+.whatsapp-booking,
 .gallery-section,
 .contact-panel {
   padding: clamp(42px, 7vw, 76px) clamp(18px, 6vw, 84px);
@@ -489,10 +486,6 @@ h2 {
   line-height: 1.65;
 }
 
-.booking-section .section-intro {
-  color: #f4d47a;
-}
-
 .service-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -500,8 +493,7 @@ h2 {
 }
 
 .service-card,
-.principle-card,
-.agenda-item {
+.principle-card {
   border: 1px solid var(--line-dark);
   border-radius: 8px;
   background: var(--surface-dark);
@@ -645,6 +637,108 @@ h2 {
     0 0 34px rgba(255, 201, 40, 0.16);
 }
 
+.facial-section {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(24px, 5vw, 64px);
+  align-items: center;
+  background:
+    radial-gradient(circle at 80% 20%, rgba(16, 167, 181, 0.16), transparent 28rem),
+    #050814;
+  border-block: 1px solid var(--line-dark);
+}
+
+.facial-media img {
+  display: block;
+  width: 100%;
+  max-height: 760px;
+  object-fit: contain;
+  border: 1px solid rgba(69, 208, 218, 0.24);
+  border-radius: 8px;
+  background: #050505;
+  box-shadow:
+    0 26px 60px rgba(0, 0, 0, 0.48),
+    0 0 34px rgba(38, 180, 194, 0.12);
+}
+
+.facial-copy h2,
+.whatsapp-booking h2 {
+  margin-bottom: 18px;
+  color: var(--title-warm);
+  font-family: var(--font-blackletter);
+  font-size: clamp(2.05rem, 4.5vw, 3.55rem);
+  font-weight: 700;
+  line-height: 1.04;
+  text-shadow:
+    0 2px 0 rgba(3, 9, 34, 0.96),
+    0 8px 20px rgba(5, 18, 66, 0.58);
+}
+
+.facial-copy > p,
+.whatsapp-booking-copy > p {
+  max-width: 760px;
+  color: var(--ink-soft);
+  font-size: 1.04rem;
+  line-height: 1.7;
+}
+
+.facial-benefits {
+  display: grid;
+  gap: 12px;
+  margin: 24px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.facial-benefits li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #edf7f8;
+  font-weight: 800;
+}
+
+.facial-benefits svg {
+  flex: 0 0 auto;
+  color: #55d6df;
+}
+
+.button-whatsapp {
+  background: linear-gradient(135deg, #39df7d, #25d366 55%, #159447);
+  color: #04150b;
+  box-shadow: 0 12px 28px rgba(37, 211, 102, 0.24);
+}
+
+.whatsapp-booking {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: clamp(24px, 5vw, 72px);
+  align-items: center;
+  background:
+    radial-gradient(circle at 85% 50%, rgba(37, 211, 102, 0.18), transparent 24rem),
+    linear-gradient(135deg, #081025, #070b17);
+  border-top: 1px solid var(--line-dark);
+}
+
+.whatsapp-booking-note {
+  color: #f5ead0 !important;
+  font-weight: 800;
+}
+
+.whatsapp-booking-mark {
+  display: grid;
+  place-items: center;
+  width: clamp(130px, 18vw, 220px);
+  aspect-ratio: 1;
+  border: 1px solid rgba(37, 211, 102, 0.32);
+  border-radius: 50%;
+  background: rgba(37, 211, 102, 0.1);
+  color: #39df7d;
+  box-shadow:
+    inset 0 0 36px rgba(37, 211, 102, 0.08),
+    0 0 44px rgba(37, 211, 102, 0.12);
+}
+
 .gallery-section {
   background: #0c132a;
 }
@@ -685,306 +779,6 @@ h2 {
   background: rgba(7, 11, 23, 0.78);
   color: #ffffff;
   font-weight: 800;
-}
-
-.booking-section {
-  position: relative;
-  overflow: hidden;
-  background:
-    radial-gradient(circle at 12% 12%, rgba(255, 201, 40, 0.22), transparent 28rem),
-    linear-gradient(135deg, #081025 0%, #101a3d 58%, #070b17 100%);
-  color: #f8f1d7;
-}
-
-.booking-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background:
-    linear-gradient(90deg, rgba(255, 201, 40, 0.08), transparent 18%),
-    linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.22));
-}
-
-.booking-section > * {
-  position: relative;
-}
-
-.booking-section .eyebrow,
-.agenda-section .eyebrow {
-  color: #ffc928;
-}
-
-.booking-form {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-  max-width: 980px;
-  padding: clamp(18px, 3vw, 28px);
-  border: 1px solid rgba(255, 201, 40, 0.18);
-  border-radius: 8px;
-  background: rgba(7, 11, 23, 0.72);
-  box-shadow:
-    0 22px 54px rgba(0, 0, 0, 0.32),
-    inset 0 1px 0 rgba(255, 255, 255, 0.08);
-}
-
-label {
-  display: grid;
-  gap: 8px;
-  font-weight: 800;
-  color: #f8e7b8;
-}
-
-input,
-select,
-textarea {
-  width: 100%;
-  border: 1px solid rgba(255, 201, 40, 0.26);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.94);
-  color: #111626;
-  min-height: 48px;
-  padding: 12px 13px;
-}
-
-textarea {
-  resize: vertical;
-}
-
-.availability-note {
-  color: #f4d47a;
-  font-size: 0.92rem;
-  font-weight: 800;
-}
-
-.full-row {
-  grid-column: 1 / -1;
-}
-
-.admin-login-section,
-.admin-private-section {
-  background:
-    radial-gradient(circle at 80% 0%, rgba(42, 92, 230, 0.18), transparent 24rem),
-    #070b17;
-}
-
-.admin-modal-backdrop {
-  position: fixed;
-  inset: 0;
-  z-index: 100;
-  display: grid;
-  place-items: center;
-  padding: 18px;
-  background: rgba(3, 6, 16, 0.78);
-  backdrop-filter: blur(10px);
-}
-
-.admin-modal {
-  position: relative;
-  width: min(1180px, 100%);
-  max-height: min(88vh, 900px);
-  overflow: auto;
-  padding: clamp(22px, 3vw, 34px);
-  padding-top: clamp(56px, 6vw, 70px);
-  border: 1px solid rgba(255, 201, 40, 0.2);
-  border-radius: 8px;
-  background:
-    radial-gradient(circle at 90% 0%, rgba(42, 92, 230, 0.2), transparent 22rem),
-    #070b17;
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.58);
-}
-
-.modal-close {
-  position: absolute;
-  top: 14px;
-  right: 14px;
-  display: grid;
-  place-items: center;
-  width: 42px;
-  height: 42px;
-  border: 1px solid rgba(255, 201, 40, 0.24);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.08);
-  color: #ffffff;
-  cursor: pointer;
-}
-
-.admin-login-panel,
-.admin-private-header {
-  display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(280px, 1.1fr);
-  gap: clamp(18px, 4vw, 44px);
-  align-items: start;
-}
-
-.admin-login-panel {
-  max-width: 1040px;
-}
-
-.admin-login-panel p {
-  color: var(--ink-soft);
-  line-height: 1.65;
-}
-
-.admin-login-form {
-  display: grid;
-  gap: 14px;
-}
-
-.form-error {
-  margin: 0;
-  color: #ffd2cb;
-  font-weight: 800;
-}
-
-.form-success {
-  margin: 0;
-  color: #dff6e7;
-  font-weight: 900;
-}
-
-.admin-panel-error {
-  padding: 12px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(143, 38, 31, 0.18);
-}
-
-.admin-private-header {
-  grid-template-columns: minmax(0, 1fr) auto;
-  align-items: center;
-  margin-bottom: 24px;
-}
-
-.admin-private-section .agenda-section {
-  padding: 0;
-}
-
-.admin-date-filter {
-  max-width: 240px;
-  margin-bottom: 18px;
-}
-
-.agenda-table-wrap {
-  overflow-x: auto;
-  border: 1px solid rgba(255, 201, 40, 0.18);
-  border-radius: 8px;
-}
-
-.agenda-table {
-  width: 100%;
-  min-width: 820px;
-  border-collapse: collapse;
-  background: rgba(12, 19, 42, 0.78);
-}
-
-.agenda-table th,
-.agenda-table td {
-  padding: 12px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  text-align: left;
-  vertical-align: top;
-}
-
-.agenda-table th {
-  color: var(--title-warm);
-  font-size: 0.78rem;
-  text-transform: uppercase;
-}
-
-.table-actions {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
-.table-actions button {
-  min-height: 34px;
-  border: 1px solid rgba(255, 201, 40, 0.22);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.08);
-  color: #ffffff;
-  cursor: pointer;
-}
-
-.manual-appointment-form {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
-  margin-top: 24px;
-  padding-top: 20px;
-  border-top: 1px solid rgba(255, 201, 40, 0.18);
-}
-
-.manual-appointment-form h3 {
-  grid-column: 1 / -1;
-  margin-bottom: 0;
-  color: var(--title-warm);
-}
-
-.agenda-list {
-  display: grid;
-  gap: 12px;
-}
-
-.agenda-item {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 18px;
-  align-items: center;
-  padding: 18px;
-}
-
-.agenda-item div:first-child {
-  display: grid;
-  gap: 5px;
-}
-
-.agenda-item span,
-.agenda-item small,
-.empty-state {
-  color: var(--ink-soft);
-}
-
-.agenda-actions {
-  gap: 8px;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-}
-
-.agenda-actions button {
-  display: grid;
-  place-items: center;
-  width: 40px;
-  height: 40px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.08);
-  color: #ffffff;
-  cursor: pointer;
-}
-
-.status {
-  min-width: 108px;
-  padding: 9px 10px;
-  border-radius: 8px;
-  text-align: center;
-  font-weight: 800;
-}
-
-.status-pending {
-  background: #fff2c2;
-  color: #6b5200;
-}
-
-.status-confirmed {
-  background: #dff6e7;
-  color: #176637;
-}
-
-.status-cancelled {
-  background: #ffe0dd;
-  color: #8f261f;
 }
 
 .contact-panel {
@@ -1037,6 +831,8 @@ textarea {
   .hero,
   .story-layout,
   .suit-aside,
+  .facial-section,
+  .whatsapp-booking,
   .contact-panel {
     grid-template-columns: 1fr;
   }
@@ -1095,6 +891,10 @@ textarea {
   .gallery-item:first-child {
     min-height: 300px;
   }
+
+  .whatsapp-booking-mark {
+    display: none;
+  }
 }
 
 @media (max-width: 640px) {
@@ -1129,17 +929,8 @@ textarea {
     width: min(86vw, 46svh);
   }
 
-  .service-grid,
-  .booking-form,
-  .admin-login-panel,
-  .admin-private-header,
-  .manual-appointment-form,
-  .agenda-item {
+  .service-grid {
     grid-template-columns: 1fr;
-  }
-
-  .agenda-actions {
-    justify-content: flex-start;
   }
 }
 
