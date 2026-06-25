@@ -1,5 +1,14 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { LogOut, Lock, Plus, Trash2, X } from 'lucide-react';
+import {
+  CalendarDays,
+  ChevronLeft,
+  ChevronRight,
+  LogOut,
+  Lock,
+  Plus,
+  Trash2,
+  X,
+} from 'lucide-react';
 import {
   clearAdminToken,
   createAdminAppointment,
@@ -17,8 +26,28 @@ const getLocalDateInputValue = () => {
   return `${year}-${month}-${day}`;
 };
 
+const parseDateInputValue = (dateValue) => new Date(`${dateValue}T12:00:00`);
+
+const formatSelectedDate = (dateValue) =>
+  new Intl.DateTimeFormat('es-AR', {
+    weekday: 'long',
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  }).format(parseDateInputValue(dateValue));
+
+const moveDate = (dateValue, amount) => {
+  const date = parseDateInputValue(dateValue);
+  date.setDate(date.getDate() + amount);
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+};
+
 export function AdminAccess({ isOpen, onClose }) {
   const closeButtonRef = useRef(null);
+  const dateInputRef = useRef(null);
   const [isAuthenticated, setIsAuthenticated] = useState(() => Boolean(getAdminToken()));
   const [appointments, setAppointments] = useState([]);
   const [selectedDate, setSelectedDate] = useState(getLocalDateInputValue);
@@ -183,14 +212,48 @@ export function AdminAccess({ isOpen, onClose }) {
               </button>
             </div>
 
-            <label className="admin-date-filter">
-              Fecha
+            <div className="admin-date-filter">
+              <span className="admin-date-label">Fecha</span>
+              <div className="date-selector" aria-label="Seleccionar fecha de la agenda">
+                <button
+                  type="button"
+                  aria-label="Ver día anterior"
+                  onClick={() => setSelectedDate((currentDate) => moveDate(currentDate, -1))}
+                >
+                  <ChevronLeft size={22} />
+                </button>
+                <button
+                  className="date-selector-current"
+                  type="button"
+                  aria-label={`Elegir fecha. Fecha actual: ${formatSelectedDate(selectedDate)}`}
+                  onClick={() => {
+                    if (dateInputRef.current?.showPicker) {
+                      dateInputRef.current.showPicker();
+                    } else {
+                      dateInputRef.current?.click();
+                    }
+                  }}
+                >
+                  <CalendarDays size={19} />
+                  <span>{formatSelectedDate(selectedDate)}</span>
+                </button>
+                <button
+                  type="button"
+                  aria-label="Ver día siguiente"
+                  onClick={() => setSelectedDate((currentDate) => moveDate(currentDate, 1))}
+                >
+                  <ChevronRight size={22} />
+                </button>
+              </div>
               <input
+                ref={dateInputRef}
+                className="date-selector-native"
                 type="date"
                 value={selectedDate}
                 onChange={(event) => setSelectedDate(event.target.value)}
+                aria-label="Elegir una fecha del calendario"
               />
-            </label>
+            </div>
 
             {error && <p className="form-error admin-panel-error" role="alert">{error}</p>}
             <div className="agenda-table-wrap">
