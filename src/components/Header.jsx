@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { MessageCircle, Menu, Shirt, Sparkles, X } from 'lucide-react';
+import { CalendarDays, Menu, Shirt, Sparkles, X } from 'lucide-react';
 
-export function Header() {
+export function Header({ onOpenAdmin }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const closeMenu = () => setIsMenuOpen(false);
 
@@ -38,10 +38,17 @@ export function Header() {
           <Shirt size={18} />
           Trajes
         </a>
-        <a className="nav-button" href="#contacto" onClick={closeMenu}>
-          <MessageCircle size={18} />
-          Coordinar
-        </a>
+        <button
+          className="nav-button"
+          type="button"
+          onClick={() => {
+            closeMenu();
+            onOpenAdmin();
+          }}
+        >
+          <CalendarDays size={18} />
+          Agenda
+        </button>
       </nav>
     </header>
   );

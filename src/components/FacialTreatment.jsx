@@ -10,8 +10,8 @@ export function FacialTreatment({ business }) {
     <section className="facial-section" id="limpieza-facial">
       <div className="facial-media">
         <img
-          src="/images/limpieza-facial-emape.jpeg"
-          alt="Servicio de limpieza facial profunda en EMAPE.BARBERSHOP"
+          src="/images/limpieza-facial-profunda.png"
+          alt="Tratamiento profesional de limpieza facial profunda"
           loading="lazy"
         />
       </div>

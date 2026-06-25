@@ -36,10 +36,6 @@ export function Hero({ business }) {
             <WhatsAppIcon />
             Coordinar por WhatsApp
           </a>
-          <a className="button button-secondary" href={whatsappUrl} target="_blank" rel="noreferrer">
-            <WhatsAppIcon />
-            WhatsApp
-          </a>
           <a className="button button-secondary" href={instagramUrl} target="_blank" rel="noreferrer">
             <InstagramIcon />
             Instagram

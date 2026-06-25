@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import { AdminAccess } from '../components/AdminAccess.jsx';
 import { BrandStory } from '../components/BrandStory.jsx';
 import { FacialTreatment } from '../components/FacialTreatment.jsx';
 import { Header } from '../components/Header.jsx';
@@ -12,10 +14,11 @@ const barbershopData = getBarbershopData();
 
 export function HomePage() {
   const { business, services } = barbershopData;
+  const [isAdminOpen, setIsAdminOpen] = useState(false);
 
   return (
     <>
-      <Header />
+      <Header onOpenAdmin={() => setIsAdminOpen(true)} />
       <main>
         <Hero business={business} />
         <BrandStory />
@@ -29,6 +32,7 @@ export function HomePage() {
         <span className="developer-footer-mark">CO</span>
         <span>Desarrollado por Carlos Otero</span>
       </footer>
+      <AdminAccess isOpen={isAdminOpen} onClose={() => setIsAdminOpen(false)} />
     </>
   );
 }
