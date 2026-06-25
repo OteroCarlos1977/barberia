@@ -2,7 +2,12 @@ import admin from 'firebase-admin';
 
 const parseServiceAccount = () => {
   if (process.env.FIREBASE_SERVICE_ACCOUNT) {
-    return JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
+    const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
+    return {
+      projectId: serviceAccount.projectId || serviceAccount.project_id,
+      clientEmail: serviceAccount.clientEmail || serviceAccount.client_email,
+      privateKey: (serviceAccount.privateKey || serviceAccount.private_key)?.replace(/\\n/g, '\n'),
+    };
   }
 
   return {
